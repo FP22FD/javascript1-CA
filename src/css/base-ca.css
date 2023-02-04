@@ -1,0 +1,215 @@
+/* Useful as default. 
+Ref: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
+
+@font-face {
+  font-family: "Tenor Sans";
+  src: url("/assets/fonts/Ternor/TenorSans-Regular.ttf") format(truetype);
+}
+
+:root {
+  /* Used for header and footer*/
+  --color-main-yellow: #f6ce00;
+
+  /* Used for accent*/
+  --color-secondary-blue: #c5e5de;
+
+  /* Used for accent, action and border*/
+  --color-red: #c6302c;
+
+  /* Used for fonts, icon*/
+  --color-font: #212427;
+
+  /* Used for site bg, font, card bg */
+  --color-off-white: #fcfcfc;
+
+  /* Used for placeholder and overlay*/
+  --color-gray: #888888;
+
+  /* Used for input border style*/
+  --color-input-border: #ccc;
+
+  --font-family-base: "Tenor Sans";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-off-white);
+
+  font-family: "Tenor Sans";
+  font-size: 14px;
+  color: var(--color-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.page-title {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5 {
+  font-family: "Tenor Sans";
+  color: var(--color-font);
+  font-weight: normal;
+}
+
+.display-1 {
+  font-size: 32px;
+}
+
+.display-2 {
+  font-size: 24px;
+  letter-spacing: 0;
+}
+
+.display-3 {
+  font-size: 18px;
+}
+
+p,
+span {
+  line-height: 1.5rem;
+}
+
+small {
+  font-size: 12px;
+}
+
+a {
+  color: var(--color-font);
+  text-decoration: none;
+}
+
+a:hover,
+a:hover * {
+  transition: all 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+a.active {
+  border-bottom: 2px solid var(--color-red);
+}
+
+figure {
+  margin: 0;
+}
+
+.mobile {
+  display: block;
+}
+
+.desktop {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* style for forms */
+
+input[type="email"],
+input[type="text"],
+textarea {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+}
+
+input[type="email"] {
+  margin-top: 4px;
+  min-height: 40px;
+
+  border: 1px solid var(--color-input-border);
+}
+
+input[type="email"]:focus {
+  border: 0;
+
+  outline: 1px solid var(--color-red);
+  box-shadow: 0 4px 8px 0 var(--shadow-box);
+}
+
+textarea {
+  min-height: 200px;
+  margin-top: 4px;
+  border: 1px solid var(--color-input-border);
+}
+
+textarea[name="input-message"]:focus {
+  border-color: transparent;
+
+  outline: 1px solid var(--color-red);
+  box-shadow: 0 4px 8px 0 var(--shadow-box);
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .display-1 {
+    font-size: 40px;
+  }
+
+  .display-2 {
+    font-size: 32px;
+  }
+
+  .display-3 {
+    font-size: 24px;
+  }
+
+  small {
+    font-size: 14px;
+  }
+
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}

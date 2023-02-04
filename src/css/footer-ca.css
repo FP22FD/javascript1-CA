@@ -1,0 +1,17 @@
+.footer-box {
+  margin-top: 8px;
+  margin-bottom: 24px;
+  padding-top: 8px;
+}
+
+.social-media-footer {
+  display: flex;
+  gap: 24px;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social-media-footer a:hover {
+  transform: scale(1.1);
+}

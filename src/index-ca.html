@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the search page for movies.">
+    <title>Movies Search Page | Home</title>
+    <link rel="stylesheet" href="css/base-ca.css">
+    <link rel="stylesheet" href="css/shared-ca.css">
+    <link rel="stylesheet" href="css/header-ca.css">
+    <link rel="stylesheet" href="css/footer-ca.css">
+    <link rel="stylesheet" href="css/style-ca.css">
+    <script defer src="/javascript-ca.js"></script>
+</head>
+
+<body>
+
+    <div id="main-container">
+        <header>
+            <!-- grid part | menu -->
+            <label id="hamburger-label" for="hamburger-input">
+                <img src="assets/icons/hamburger_button.svg" alt="hamburger icon">
+            </label>
+            <input type="checkbox" id="hamburger-input">
+
+            <nav aria-label="main menu">
+                <a class="active" href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <a id="logo" href="index.html">
+                <img src="assets/icons/logo-i-love-movies.svg" class="fit-image" alt="logo">
+            </a>
+
+        </header>
+
+        <h1 class="title">Movies</h1>
+
+        <div class="loader loading-indicator"></div>
+
+        <main>
+            <form action="">
+                <input name="search" placeholder="Type the movie" type="text">
+                <button id="btn" onclick="xxx()">Search</button>
+            </form>
+
+            <div id="err" class="error">
+                Unable to search for the movies. Please retry again.
+            </div>
+
+            <div class="lista">
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg"
+                        alt="Cover of the movie Twilight">
+                    <h2><a href="./detail.html?imdbID=tt0499549"> Twilight</a></h2>
+                    <p>2009</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg"
+                        alt="Cover of the movie Twilight">
+                    <h2><a href="./detail.html?imdbID=tt0499549"> Twilight</a></h2>
+                    <p>2009</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg"
+                        alt="Cover of the movie Twilight">
+                    <h2><a href="./detail.html?imdbID=tt0499549"> Twilight</a></h2>
+                    <p>2009</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg"
+                        alt="Cover of the movie Twilight">
+                    <h2><a href="./detail.html?imdbID=tt0499549"> Twilight</a></h2>
+                    <p>2009</p>
+                </div>
+
+                <div class="item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg"
+                        alt="Cover of the movie Twilight">
+                    <h2><a href="./detail.html?imdbID=tt0499549"> Twilight</a></h2>
+                    <p>2009</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-box social-media-footer">
+                <a href="https://www.instagram.com"><img src="assets/icons/icon-instagram.svg" alt="icon Instagram"></a>
+                <a href="https://twitter.com"><img src="assets/icons/icon-twitter.svg" alt="icon Twitter"></a>
+                <a href="https://www.youtube.com"><img src="assets/icons/icon-youtube.svg" alt="icon Youtube"></a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
