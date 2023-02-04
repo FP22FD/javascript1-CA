@@ -1,0 +1,29 @@
+.box-info {
+  margin-left: 16px;
+}
+
+#flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item1 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  padding: 32px;
+}
+
+.item1 .row2,
+.item1 .row3,
+.item1 .row4 {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 8 px 0 8px;
+}
+
+#input-message {
+  min-height: 200px;
+}

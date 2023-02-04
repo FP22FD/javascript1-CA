@@ -1,0 +1,56 @@
+header {
+  display: grid;
+  grid-template-columns: 24px repeat(4, 1fr) 24px;
+  grid-template-rows: repeat(3, auto);
+
+  padding-top: 8px;
+}
+
+#logo {
+  grid-area: 1 / 2 / span 3 / span 2;
+  align-self: end;
+
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  grid-area: 2 / 6 / span 1 / span 8;
+  display: none;
+
+  display: flex;
+
+  gap: 16px;
+  margin-right: 16px;
+}
+
+nav a {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 800px) {
+  header {
+    display: grid;
+    grid-template-columns: 88px repeat(12, 1fr) 88px;
+    grid-template-rows: 50px auto;
+  }
+
+  #logo {
+    grid-area: 2 / 2 / span 1 / span 3;
+    align-self: end;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav {
+    grid-area: 2 / 6 / span 1 / span 8;
+
+    display: flex;
+    gap: 24px;
+    position: inherit;
+
+    align-items: flex-end;
+  }
+}

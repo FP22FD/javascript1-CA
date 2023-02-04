@@ -1,19 +1,72 @@
-h1.title,
-footer {
-  background-color: var(--color-main-yellow);
-  color: aliceblue;
+/*-------------body--------------*/
+
+body form {
+  margin: 10px;
   padding: 10px;
-  text-align: center;
+  border: 1px solid var(--color-gray);
+  border-radius: 20px;
+
+  display: flex;
 }
 
-/* -------spinner-------------- */
+body form input {
+  padding: 5px;
+  border: none;
+  outline: none;
+
+  width: 100%;
+}
+
+
+div.list {
+  padding: 5px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+div.item {
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  border: 2px var(-color-red);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+div.item:hover {
+  background-color: var(--color-secondary-blue);
+  cursor: pointer;
+}
+
+div.item img {
+  width: 100%;
+}
+
+/*---------spinner--------------*/
+
 .loading-indicator {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
+  border: 16px solid var(--color-input-border);
+  border-top: 16px solid var(--color-main-yellow);
   border-radius: 50%;
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
+
+  margin-top: 8em;
+  margin-left: 25em;
+
+  position: fixed;
+  top: 24%;
+  right: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
 }
 
 @keyframes spin {
