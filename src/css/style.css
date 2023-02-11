@@ -7,6 +7,7 @@ body form {
   border-radius: 20px;
 
   display: flex;
+  gap: 24px;
 }
 
 body form input {
@@ -15,8 +16,8 @@ body form input {
   outline: none;
 
   width: 100%;
+  border-radius: 5px;
 }
-
 
 div.list {
   padding: 5px;
@@ -25,15 +26,24 @@ div.list {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  /* background: rgba(255, 0, 0, 0.1); */
+  gap: 10px;
 }
 
 div.item {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   text-align: center;
-  width: 200px;
-  border: 2px var(-color-red);
+  width: 300px;
+  height: 633.333px;
+
+  background: #f6ce0042;
   border-radius: 5px;
   margin: 5px;
+  border: 1px solid black;
+  text-align: left;
 }
 
 div.item:hover {
@@ -42,10 +52,38 @@ div.item:hover {
 }
 
 div.item img {
+  /* width: 278.22px; */
+  height: 350px;
   width: 100%;
+  object-fit: cover;
 }
 
-/*---------spinner--------------*/
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt {
+  grid-column-start: 1;
+  font-weight: bold;
+}
+
+dd {
+  grid-column-start: 2;
+  margin-bottom: 16px;
+}
+
+/*---------message error--------------*/
+
+.error {
+  padding: 1rem;
+  color: darkred;
+  background: rgba(255, 0, 0, 0.1);
+
+  display: none;
+}
+
+/*---------spinner--------------------*/
 
 .loading-indicator {
   border: 16px solid var(--color-input-border);
@@ -55,16 +93,7 @@ div.item img {
   height: 120px;
   animation: spin 2s linear infinite;
 
-  margin-top: 8em;
-  margin-left: 25em;
-
-  position: fixed;
-  top: 24%;
-  right: 60%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 8em auto 8em auto;
 
   display: none;
 }

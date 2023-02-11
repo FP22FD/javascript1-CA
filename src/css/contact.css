@@ -1,14 +1,15 @@
-.box-info {
+/* .box-info {
   margin-left: 16px;
-}
+  text-align: center;
+} */
 
-#flex-container {
+/* #flex-container {
   display: flex;
   flex-direction: column;
   gap: 24px;
-}
+} */
 
-.item1 {
+.form {
   display: flex;
   flex-direction: column;
 
@@ -16,9 +17,7 @@
   padding: 32px;
 }
 
-.item1 .row2,
-.item1 .row3,
-.item1 .row4 {
+.row {
   display: flex;
   flex-direction: column;
   padding: 8px 8 px 0 8px;
@@ -26,4 +25,18 @@
 
 #input-message {
   min-height: 200px;
+}
+
+.message-error {
+  display: none;
+  color: red;
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+.isFormValid {
+  display: none;
+  color: green;
+  font-size: 16px;
+  margin-top: 2px;
 }

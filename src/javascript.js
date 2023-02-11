@@ -8,8 +8,9 @@ fetch("").then(() => {
   loading.style.display = "none";
 }, 3000);
 
-// https://www.omdbapi.com/?apikey=7e50890c&type=movie&s=avatar
-// https://www.omdbapi.com/?apikey=7e50890c&i=tt0499549
+
+https://www.omdbapi.com/?apikey=7e50890c&type=movie&s=avatar
+https://www.omdbapi.com/?apikey=7e50890c&i=tt0499549
 
 const movies = {
   Search: [

@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="/javascript.js"></script>
+    <!-- <script defer src="javascript.js"></script> -->
+    <script defer src="/formvalidate.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         <header>
             <!-- grid part | menu -->
             <nav aria-label="main menu">
-                <a  href="index.html">Home</a>
+                <a href="index.html">Home</a>
                 <a class="active" href="contact.html">Contact</a>
             </nav>
 
@@ -32,47 +33,64 @@
 
         </header>
 
-        
+
         <div class="loader loading-indicator"></div>
-        
+
         <main>
-            
+
             <section id="flex-container">
                 <div class="box-info">
-    
+
                     <h1 class="title">Get in touch with us </h1>
-    
-                    <p>Have a question about our website? We will love to hear from you!</p>
+
                     <p>Let us know what you need by filling in the form below.</p>
-    
+
                 </div>
-            
-                <form method="get" action="/contact.html" class="item1">
-                    <div class="row1">
+
+                <form id="contact-form" class="form">
+                    <div class="row">
                         <h1>
                             Contact us
                         </h1>
                     </div>
-            
-                    <div class="row2">
-                        <label for="input-email" class="text-light">EMAIL ADDRESS</label>
-                        <input type="email" name="email" id="input-email">
+
+                    <div id="isFormValid" class="isFormValid">
+                        <p>The form passed validation!</p>
                     </div>
-            
-                    <div class="row3">
-                        <label for="input-message" class="text-light">MESSAGE</label>
-                        <textarea name="input-message" id="input-message"></textarea>
+
+                    <div class="row">
+                        <label for="input-name" class="text-light">FULL NAME</label>
+                        <input type="text" name="input-name" id="input-name" placeholder="(required)">
+                        <div class="message-error" id="name-error">Please enter your firts name</div>
                     </div>
-            
-                    <div class="row4">
+
+                    <div class="row">
+                        <label for="input-subject" class="text-light">SUBJECT</label>
+                        <input type="text" name="input-subject" id="input-subject" placeholder="(must have a value with a minimum length of 10)">
+                        <div class="message-error" id="subject-error">Please type the subject</div>
+                    </div>
+
+                    <div class="row">
+                        <label for="input-email" class="text-light">EMAIL</label>
+                        <input type="email" name="input-email" id="input-email" placeholder="(must have a value and be formatted like an email address)">
+                        <div class="message-error" id="email-error">Please enter a valid email address</div>
+                    </div>
+
+                    <div class="row">
+                        <label for="input-address" class="text-light">ADDRESS</label>
+                        <input type="text" name="input-address" id="input-address" placeholder="(must have a value with a minimum length of 25)">
+                        <div class="message-error" id="address-error">Please enter a valid address</div>
+                    </div>
+
+                    <div class="row">
                         <button type="submit" class="cta">
                             <span>Submit</span>
                         </button>
-            
+
                     </div>
-            
+
                 </form>
-     
+
             </section>
 
         </main>

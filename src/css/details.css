@@ -1,0 +1,42 @@
+.title {
+  font-weight: 700;
+  /* text-align: justify; */
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+
+  border: 2px solid red;
+  gap: 10px;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+
+  border: 1px solid green;
+  margin: 10px;
+}
+
+.img {
+    flex-basis: 50%;
+
+    border: 1px solid blue;
+    padding: 8px;
+
+}
+
+.movie-descrip {
+  margin-left: 8px;
+}
+
+.card .content p {
+  font-weight: 700;
+}
+
+.card .content span {
+  font-weight: 100;
+  margin-left: 8px;
+}

@@ -13,6 +13,7 @@ header {
 
 .title {
   grid-area: 2 / 2 / span 1 / span 4;
+  text-align: center;
 }
 
 main {
@@ -28,6 +29,16 @@ footer {
   background-color: var(--color-main-yellow);
 
   margin-top: 48px;
+}
+
+img.fit-image {
+  width: 100%;
+  height: 100%;
+}
+
+.box-info {
+  margin-left: 16px;
+  text-align: center;
 }
 
 .cta {
@@ -63,7 +74,6 @@ button.cta:hover {
   align-items: center;
   justify-content: center;
   gap: 24px;
-
 }
 
 /*-----media queries/desktop--------- */
@@ -83,12 +93,16 @@ button.cta:hover {
   }
 
   main {
-    grid-area: 3 / 2 / span 1 / span 8;
+    grid-area: 3 / 2 / span 1 / span 12;
   }
 
   .cta {
     min-width: min-content;
     max-width: 50%;
+  }
+
+  .cta-small {
+    width: 20%;
   }
 
   main .cta {
@@ -98,5 +112,4 @@ button.cta:hover {
   .title {
     grid-area: 2 / 2 / span 1 / span 8;
   }
-
 }
