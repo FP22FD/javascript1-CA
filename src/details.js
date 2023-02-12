@@ -45,6 +45,13 @@ function displaySpinner(visible) {
   }
 }
 
+function showImg(img) {
+  if (img === "N/A") {
+    img = "assets/images/image-not-available.jpg";
+  }
+  document.querySelector("#img").src = img;
+}
+
 async function fetchMovie(imdbID) {
   //   start the spinner
   //   const loading = document.querySelector("#loader");
@@ -64,13 +71,14 @@ async function fetchMovie(imdbID) {
       displayError(true);
     } else {
       const data = await response.json();
-      console.log("data", data);
+      // console.log("data", data);
 
       //   const img = document.querySelector("#img");
       //   console.log("src", img.src);
       //   img.src = data.Poster;
 
-      document.querySelector("#img").src = data.Poster;
+      // document.querySelector("#img").src = data.Poster;
+      showImg(data.Poster);
       document.querySelector("#title").innerHTML = data.Title;
       document.querySelector("#year").innerHTML = data.Year;
       document.querySelector("#type").innerHTML = data.Type;
@@ -85,7 +93,7 @@ async function fetchMovie(imdbID) {
     }
   } catch (e) {
     //  error msg
-    console.log("error");
+    // console.log("error");
     displayError(true);
 
     displayMovie(false);

@@ -42,7 +42,11 @@ async function formSearch(event) {
   // console.log("ok");
 
   const search = document.querySelector("#search").value;
-  console.log("search", search);
+  // console.log("search", search);
+
+  if (search === "") {
+    return;
+  }
 
   try {
     // start the spinner
