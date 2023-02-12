@@ -30,7 +30,7 @@ function displayMovie(visible) {
 
   const title = document.querySelector("#title-info");
   if (visible === true) {
-    title.style.display = "flex";
+    title.style.display = "block";
   } else {
     title.style.display = "none";
   }

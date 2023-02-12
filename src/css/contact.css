@@ -1,22 +1,3 @@
-/* .box-info {
-  margin-left: 16px;
-  text-align: center;
-} */
-
-/* #flex-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-} */
-
-.form {
-  display: flex;
-  flex-direction: column;
-
-  gap: 16px;
-  padding: 32px;
-}
-
 .row {
   display: flex;
   flex-direction: column;
@@ -29,14 +10,14 @@
 
 .message-error {
   display: none;
-  color: red;
+  color: var(--color-red);
   font-size: 16px;
   margin-top: 2px;
 }
 
 .isFormValid {
   display: none;
-  color: green;
+  color: rgb(40, 192, 40);
   font-size: 16px;
   margin-top: 2px;
 }

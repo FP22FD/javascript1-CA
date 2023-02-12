@@ -10,6 +10,9 @@
   /* Used for accent*/
   --color-secondary-blue: #c5e5de;
 
+  /* Used for background of cards*/
+  --color-cardbg:#f6ce0042;
+
   /* Used for accent, action and border*/
   --color-red: #c6302c;
 
@@ -60,7 +63,7 @@ a {
 a:hover,
 a:hover * {
   transition: all 0.3s ease;
-  color: white;
+  color: var(--color-font);
   font-weight: bold;
 }
 
@@ -68,7 +71,7 @@ a.active {
   border-bottom: 2px solid var(--color-red);
 }
 
-/* style for forms */
+/*----------------Style for form----------------*/
 
 input[type="email"],
 input[type="text"],
@@ -109,4 +112,32 @@ textarea[name="input-message"]:focus {
 
   outline: 1px solid var(--color-red);
   box-shadow: 0 4px 8px 0 var(--shadow-box);
+}
+
+/*-----------------*/
+.form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+  padding: 32px;
+}
+
+body form {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid var(--color-gray);
+  border-radius: 20px;
+
+  display: flex;
+  gap: 24px;
+}
+
+body form input {
+  padding: 5px;
+  border: none;
+  outline: none;
+
+  width: 100%;
+  border-radius: 5px;
 }

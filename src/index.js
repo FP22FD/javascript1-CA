@@ -66,7 +66,7 @@ async function formSearch(event) {
       movies.forEach(function (movie) {
         let img = movie.Poster;
         if (img === "N/A") {
-          img = "assets/images/andrew-ruiz-348421.jpg";
+          img = "assets/images/image-not-available.jpg";
         }
         const html = `
       <a href="details.html?imdbID=${movie.imdbID}">

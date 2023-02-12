@@ -7,7 +7,6 @@ header {
 }
 
 #logo {
-  /* grid-area: 1 / 2 / span 3 / span 2; */
   grid-area: 1 / 2 / span 3 / span 3;
   align-self: end;
 
