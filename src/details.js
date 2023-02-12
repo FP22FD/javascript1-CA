@@ -3,26 +3,36 @@ displayMovie(false);
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("imdbID");
-
 // console.log(id);
-fetchMovie(id);
+
+if (id !== null) {
+  fetchMovie(id);
+} else {
+  displayError(true);
+}
 
 function displayError(visible) {
-  const loading = document.querySelector("#error");
+  const error = document.querySelector("#error");
   if (visible === true) {
-    loading.style.display = "block";
+    error.style.display = "block";
   } else {
-    loading.style.display = "none";
+    error.style.display = "none";
   }
 }
 
 function displayMovie(visible) {
-  const loading = document.querySelector("#card");
+  const card = document.querySelector("#card");
   if (visible === true) {
-    loading.style.display = "flex";
-
+    card.style.display = "flex";
   } else {
-    loading.style.display = "none";
+    card.style.display = "none";
+  }
+
+  const title = document.querySelector("#title-info");
+  if (visible === true) {
+    title.style.display = "flex";
+  } else {
+    title.style.display = "none";
   }
 }
 
@@ -30,19 +40,18 @@ function displaySpinner(visible) {
   const loading = document.querySelector("#loader");
   if (visible === true) {
     loading.style.display = "flex";
-
   } else {
     loading.style.display = "none";
   }
 }
 
 async function fetchMovie(imdbID) {
-  // TODO: start the spinner
+  //   start the spinner
   //   const loading = document.querySelector("#loader");
   //   loading.style.display = "block";
   displaySpinner(true);
 
-  // TODO: hide the error message (which maybe was from before)
+  //   hide the error message (which maybe was from before)
   displayError(false);
 
   const apiKey = "7e50890c";
@@ -69,17 +78,19 @@ async function fetchMovie(imdbID) {
       document.querySelector("#director").innerHTML = data.Director;
       document.querySelector("#plot").innerHTML = data.Plot;
 
+      document.querySelector("#movie-title").innerHTML = data.Title;
+      document.title = data.Title;
+
       displayMovie(true);
     }
   } catch (e) {
-    // TODO: error msg
+    //  error msg
     console.log("error");
     displayError(true);
 
     displayMovie(false);
   } finally {
-    // TODO: hide spinner
-
+    //  hide spinner
     // console.log("finally");
 
     // const loading = document.querySelector("#loader");

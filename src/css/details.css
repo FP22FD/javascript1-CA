@@ -1,31 +1,28 @@
 .title {
   font-weight: 700;
-  /* text-align: justify; */
 }
 
 .card {
   display: flex;
   flex-direction: row;
-
-  border: 2px solid red;
   gap: 10px;
+  background: #f6ce0042;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 800px;
 }
 
 .card .content {
   display: flex;
   flex-direction: column;
-  flex-basis: 50%;
+  flex-basis: 20vmax;
 
-  border: 1px solid green;
   margin: 10px;
 }
 
 .img {
-    flex-basis: 50%;
-
-    border: 1px solid blue;
-    padding: 8px;
-
+  /* flex-basis: 50%; */
+  padding: 8px;
 }
 
 .movie-descrip {
@@ -39,4 +36,20 @@
 .card .content span {
   font-weight: 100;
   margin-left: 8px;
+}
+
+@media (max-width: 800px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #f6ce0042;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 300px;
+  }
+  .title {
+    flex-wrap: wrap;
+    text-align: left;
+  }
 }

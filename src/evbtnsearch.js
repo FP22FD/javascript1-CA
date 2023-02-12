@@ -45,13 +45,12 @@ async function formSearch(event) {
   console.log("search", search);
 
   try {
-    // TODO: start the spinner
-
+    // start the spinner
     // const loading = document.querySelector("#loader");
     // loading.style.display = "block";
     displaySpinner(true);
 
-    // TODO: hide the error message (which maybe was from before)
+    // hide the error message (which maybe was from before)
     displayError(false);
 
     const movies = await findMovies(search);
@@ -60,7 +59,7 @@ async function formSearch(event) {
     } else {
       // console.log("movies", movies);
 
-      // TODO: create HTML list
+      // create HTML list
       const resultsContainer = document.querySelector("#list");
       resultsContainer.innerHTML = "";
 
