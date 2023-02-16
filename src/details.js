@@ -53,12 +53,10 @@ function showImg(img) {
 }
 
 async function fetchMovie(imdbID) {
-  //   start the spinner
   //   const loading = document.querySelector("#loader");
   //   loading.style.display = "block";
   displaySpinner(true);
 
-  //   hide the error message (which maybe was from before)
   displayError(false);
 
   const apiKey = "7e50890c";
@@ -98,7 +96,6 @@ async function fetchMovie(imdbID) {
 
     displayMovie(false);
   } finally {
-    //  hide spinner
     // console.log("finally");
 
     // const loading = document.querySelector("#loader");

@@ -49,12 +49,10 @@ async function formSearch(event) {
   }
 
   try {
-    // start the spinner
     // const loading = document.querySelector("#loader");
     // loading.style.display = "block";
     displaySpinner(true);
 
-    // hide the error message (which maybe was from before)
     displayError(false);
 
     const movies = await findMovies(search);
@@ -63,7 +61,6 @@ async function formSearch(event) {
     } else {
       // console.log("movies", movies);
 
-      // create HTML list
       const resultsContainer = document.querySelector("#list");
       resultsContainer.innerHTML = "";
 
