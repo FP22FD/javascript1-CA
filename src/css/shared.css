@@ -59,7 +59,8 @@ img.fit-image {
   width: 100%;
   border: 0;
   font-size: 16px;
-
+  font-family: "Tenor Sans", Verdana, Tahoma, sans-serif;
+  
   background-color: var(--color-main-yellow);
 }
 

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Tenor Sans";
-  src: url("/assets/fonts/Ternor/TenorSans-Regular.ttf") format(truetype);
+  src: url("./../assets/fonts/Ternor/TenorSans-Regular.ttf") format(truetype);
 }
 
 :root {
@@ -11,7 +11,7 @@
   --color-secondary-blue: #c5e5de;
 
   /* Used for background of cards*/
-  --color-cardbg:#f6ce0042;
+  --color-cardbg: #f6ce0042;
 
   /* Used for accent, action and border*/
   --color-red: #c6302c;
@@ -40,7 +40,7 @@ body {
   padding: 0;
   background-color: var(--color-off-white);
 
-  font-family: "Tenor Sans";
+  font-family: "Tenor Sans", Verdana, Tahoma, sans-serif;
   font-size: 18px;
   color: var(--color-font);
 }
@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), Verdana, Tahoma, sans-serif;
   font-weight: 700;
 }
 
@@ -76,7 +76,7 @@ a.active {
 input[type="email"],
 input[type="text"],
 textarea {
-  font-family: var(--font-family-base);
+  font-family: var(--font-family-base), Verdana, Tahoma, sans-serif;
   font-size: 16px;
 }
 
