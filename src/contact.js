@@ -1,7 +1,4 @@
-/* ---------form validation-------------------*/
-
 const form = document.querySelector("#contact-form");
-// export default form;
 
 form.addEventListener("click", validateForm);
 

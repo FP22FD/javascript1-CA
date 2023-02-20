@@ -1,70 +1,30 @@
+import { displayElement } from "./shared.js";
+
 displayMovies(false);
 
 const form = document.querySelector("#btn");
 form.addEventListener("click", formSearch);
 
-//-------------------------------------//
-
 function displayMovies(visible) {
   displayElement(visible, "#list", "flex");
-  // const loading = document.querySelector("#list");
-  // if (visible === true) {
-  //   loading.style.display = "flex";
-  // } else {
-  //   loading.style.display = "none";
-  // }
 }
-//-------------------------------------//
 
 function displaySpinner(visible) {
   displayElement(visible, "#loader", "block");
-  // const loading = document.querySelector("#loader");
-  // if (visible === true) {
-  //   loading.style.display = "block";
-  // } else {
-  //   loading.style.display = "none";
-  // }
 }
-
-//-------------------------------------//
 
 function displayError(visible) {
   displayElement(visible, "#error", "block");
-  // const loading = document.querySelector("#error");
-  // if (visible === true) {
-  //   loading.style.display = "block";
-  // } else {
-  //   loading.style.display = "none";
-  // }
 }
-
-//-------------------------------------//
-
-function displayElement(visible, id, displayStyle) {
-  const element = document.querySelector(id);
-  if (visible === true) {
-    element.style.display = displayStyle;
-  } else {
-    element.style.display = "none";
-  }
-}
-
-/* ------------------------------*/
 
 async function formSearch(event) {
   event.preventDefault();
-  // console.log("ok");
-
   const search = document.querySelector("#search").value;
-  // console.log("search", search);
-
   if (search === "") {
     return;
   }
 
   try {
-    // const loading = document.querySelector("#loader");
-    // loading.style.display = "block";
     displaySpinner(true);
 
     displayError(false);
@@ -73,8 +33,6 @@ async function formSearch(event) {
     if (movies.ok === false) {
       displayError(true);
     } else {
-      // console.log("movies", movies);
-
       const resultsContainer = document.querySelector("#list");
       resultsContainer.innerHTML = "";
 
@@ -107,19 +65,12 @@ async function formSearch(event) {
       displayMovies(true);
     }
   } catch (e) {
-    // console.log("error");
     displayError(true);
     displayMovies(false);
   } finally {
-    // console.log("finally");
-
-    // const loading = document.querySelector("#loader");
-    // loading.style.display = "none";
     displaySpinner(false);
   }
 }
-
-//-------------------------------------//
 
 async function findMovies(text) {
   const apiKey = "7e50890c";
@@ -133,13 +84,4 @@ async function findMovies(text) {
     throw new Error("API failed");
   }
   return data.Search;
-}
-
-function displayError(visible) {
-  const loading = document.querySelector("#error");
-  if (visible === true) {
-    loading.style.display = "block";
-  } else {
-    loading.style.display = "none";
-  }
 }

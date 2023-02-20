@@ -1,9 +1,10 @@
+import { displayElement } from "./shared.js";
+
 displayMovie(false);
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("imdbID");
-// console.log(id);
 
 if (id !== null) {
   fetchMovie(id);
@@ -12,37 +13,17 @@ if (id !== null) {
 }
 
 function displayError(visible) {
-  const error = document.querySelector("#error");
-  if (visible === true) {
-    error.style.display = "block";
-  } else {
-    error.style.display = "none";
-  }
+  displayElement(visible, "#error", "block");
 }
 
 function displayMovie(visible) {
-  const card = document.querySelector("#card");
-  if (visible === true) {
-    card.style.display = "flex";
-  } else {
-    card.style.display = "none";
-  }
+  displayElement(visible, "#card", "flex");
 
-  const title = document.querySelector("#title-info");
-  if (visible === true) {
-    title.style.display = "block";
-  } else {
-    title.style.display = "none";
-  }
+  displayElement(visible, "#title-info", "block");
 }
 
 function displaySpinner(visible) {
-  const loading = document.querySelector("#loader");
-  if (visible === true) {
-    loading.style.display = "flex";
-  } else {
-    loading.style.display = "none";
-  }
+  displayElement(visible, "#loader", "flex");
 }
 
 function showImg(img) {
@@ -53,8 +34,6 @@ function showImg(img) {
 }
 
 async function fetchMovie(imdbID) {
-  //   const loading = document.querySelector("#loader");
-  //   loading.style.display = "block";
   displaySpinner(true);
 
   displayError(false);
@@ -69,13 +48,7 @@ async function fetchMovie(imdbID) {
       displayError(true);
     } else {
       const data = await response.json();
-      // console.log("data", data);
 
-      //   const img = document.querySelector("#img");
-      //   console.log("src", img.src);
-      //   img.src = data.Poster;
-
-      // document.querySelector("#img").src = data.Poster;
       showImg(data.Poster);
       document.querySelector("#title").innerHTML = data.Title;
       document.querySelector("#year").innerHTML = data.Year;
@@ -90,17 +63,10 @@ async function fetchMovie(imdbID) {
       displayMovie(true);
     }
   } catch (e) {
-    //  error msg
-    // console.log("error");
     displayError(true);
 
     displayMovie(false);
   } finally {
-    // console.log("finally");
-
-    // const loading = document.querySelector("#loader");
-    // loading.style.display = "none";
-
     displaySpinner(false);
   }
 }
