@@ -8,9 +8,14 @@ Noroff Course Assignment for JavaScript1.
 
 <!-- An in-depth paragraph about your project and overview of use. -->
 
-The main goal of this repository is to make a call to a pubblic API URL.The CA focuses on JavaScript, not styling, so I made a simple website with 3 pages, `I Love Movie`.
+The main goal of this repository is to make a call to a public API URL.
+The CA focuses on JavaScript, not styling, so I made a simple website with 3 pages, `I Love Movie`.
 
 The website design and implementation has been made with `HTML`, `CSS` and `JavaScript`:
+
+Assignment:
+
+- [Brief](./docs/js-CA-brief.pdf)
 
 ## Level 1 Process
 
@@ -65,7 +70,7 @@ To develop the website I have used `Visual Studio Code` with `Prettier` formatte
 No other tools, libraries or frameworks are required to compile or run the website.
 
 Links:
-  
+
 - Ref for "Public APIs":
 - `https://noroff-content.gitlab.io/feu/javascript-1/more-about-apis.html#free-api-lists`
 - `https://github.com/public-apis/public-apis` "Open Movie Database"
